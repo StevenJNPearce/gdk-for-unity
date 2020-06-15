@@ -1,21 +1,24 @@
 using System;
+using System.Collections.Generic;
 using NUnit.Framework.Internal;
 using Unity.PerformanceTesting;
+using UnityEditor;
+using UnityEngine;
 
 namespace Improbable.Gdk.TestUtils
 {
     [Flags]
     public enum Burst
     {
-        Default = 0,
-        Disabled = 1
+        Default = 1,
+        Disabled = 2
     }
 
     [Flags]
     public enum Backend
     {
-        Mono = 2,
-        Il2Cpp = 4
+        Mono = 1,
+        Il2Cpp = 2
     }
 
     public class PerformanceTestAttribute : PerformanceAttribute
@@ -34,12 +37,12 @@ namespace Improbable.Gdk.TestUtils
             base.ApplyToTest(test);
 
             var burstStr = burst.ToString()
-                .Replace(", ", ".Burst");
+                .Replace(", ", " Burst");
 
             var backendStr = backend.ToString()
-                .Replace(", ", ".Backend");
+                .Replace(", ", " Backend");
 
-            test.Properties.Add("Category", $"Burst{burstStr}.Backend{backendStr}");
+            test.Properties.Add("Category", $"Burst{burstStr} Backend{backendStr}");
         }
     }
 }
