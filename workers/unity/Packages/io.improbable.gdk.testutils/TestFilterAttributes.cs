@@ -20,17 +20,4 @@ namespace Improbable.Gdk.TestUtils
     {
         public BurstOffAttribute() : base("BurstOff") { }
     }
-
-    public class IgnoreThis
-    {
-        public void Test()
-        {
-            var api = ScriptableObject.CreateInstance<TestRunnerApi>();
-            api.Execute(new ExecutionSettings(new Filter
-            {
-
-            }));
-
-        }
-    }
 }
