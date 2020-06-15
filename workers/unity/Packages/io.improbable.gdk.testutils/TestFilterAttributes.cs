@@ -1,5 +1,7 @@
 using System;
 using NUnit.Framework;
+using UnityEditor.TestTools.TestRunner.Api;
+using UnityEngine;
 
 namespace Improbable.Gdk.TestUtils
 {
@@ -17,5 +19,18 @@ namespace Improbable.Gdk.TestUtils
     public class BurstOffAttribute : BaseFilterAttribute
     {
         public BurstOffAttribute() : base("BurstOff") { }
+    }
+
+    public class IgnoreThis
+    {
+        public void Test()
+        {
+            var api = ScriptableObject.CreateInstance<TestRunnerApi>();
+            api.Execute(new ExecutionSettings(new Filter
+            {
+
+            }));
+
+        }
     }
 }
