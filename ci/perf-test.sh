@@ -38,7 +38,7 @@ traceStart "Testing Unity: Editmode :writing_hand:"
                 -batchmode \
                 -projectPath "${PROJECT_DIR}/workers/unity" \
                 -runEditorTests \
-                -testCategory "Performance,BurstOff" \
+                -testCategory "Performance;BurstOff" \
                 -logfile "${PROJECT_DIR}/logs/editmode-burstoff-perftest-run.log" \
                 -editorTestsResultFile "${TEST_RESULTS_DIR}/editmode-burstoff-perftest-results.xml" \
                 "${ACCELERATOR_ARGS}"
@@ -67,7 +67,7 @@ traceStart "Testing Unity: Playmode :joystick:"
                 -projectPath "${PROJECT_DIR}/workers/unity" \
                 -runTests \
                 -testPlatform playmode \
-                -testCategory "Performance,Il2CppBackend" \
+                -testCategory "Performance;Il2CppBackend" \
                 -logfile "${PROJECT_DIR}/logs/playmode-burst-il2cpp-perftest-run.log" \
                 -testResults "${TEST_RESULTS_DIR}/playmode-burst-il2cpp-perftest-results.xml" \
                 "${ACCELERATOR_ARGS}" \
@@ -80,7 +80,7 @@ traceStart "Testing Unity: Playmode :joystick:"
                 -projectPath "${PROJECT_DIR}/workers/unity" \
                 -runTests \
                 -testPlatform playmode \
-                -testCategory "Performance,BurstOff" \
+                -testCategory "Performance;BurstOff" \
                 -logfile "${PROJECT_DIR}/logs/playmode-burstoff-mono-perftest-run.log" \
                 -testResults "${TEST_RESULTS_DIR}/playmode-burstoff-mono-perftest-results.xml" \
                 "${ACCELERATOR_ARGS}" \
@@ -94,7 +94,7 @@ traceStart "Testing Unity: Playmode :joystick:"
                 -projectPath "${PROJECT_DIR}/workers/unity" \
                 -runTests \
                 -testPlatform playmode \
-                -testCategory "Performance,BurstOff,Il2CppBackend" \
+                -testCategory "Performance;BurstOff;Il2CppBackend" \
                 -logfile "${PROJECT_DIR}/logs/playmode-burstoff-il2cpp-perftest-run.log" \
                 -testResults "${TEST_RESULTS_DIR}/playmode-burstoff-il2cpp-perftest-results.xml" \
                 "${ACCELERATOR_ARGS}" \
