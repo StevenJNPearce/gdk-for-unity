@@ -6,7 +6,6 @@ using Improbable.Gdk.Core.Representation;
 using Improbable.Gdk.Subscriptions;
 using Unity.Entities;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 namespace Improbable.Gdk.GameObjectCreation
 {
@@ -190,7 +189,6 @@ namespace Improbable.Gdk.GameObjectCreation
                             Debug.LogException(e);
                         }
                     }
-                        Debug.LogException(e);
 
                     PostUpdateCommands.AddComponent(entity, new GameObjectInitSystemStateComponent
                     {
