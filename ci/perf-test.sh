@@ -55,8 +55,6 @@ function runTests {
     popd
 }
 
-cleanUnity "$(pwd)/workers/unity"
-
 traceStart "Performance Testing: Editmode :writing_hand:"
     for burst in burst-default burst-disabled
     do
