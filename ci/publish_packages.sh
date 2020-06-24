@@ -6,10 +6,6 @@ if [[ -n "${DEBUG-}" ]]; then
     set -x
 fi
 
-cat ~/.npmrc
-npm whoami --registry="https://npm.spatialoschina.com/repository/unity/"
-exit 0
-
 cd "$(dirname "$0")/../"
 
 PKG_ROOT="workers/unity/Packages"
